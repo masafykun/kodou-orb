@@ -1,0 +1,44 @@
+:root { color-scheme: dark; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; background: #05060a; overflow: hidden; }
+
+#c { position: fixed; inset: 0; display: block; touch-action: none; }
+
+.hud {
+  position: fixed;
+  z-index: 2;
+  color: #eef0f6;
+  font-family: "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.hud--top { top: 24px; left: 28px; pointer-events: none; }
+.title { font-size: 26px; font-weight: 800; letter-spacing: 0.04em; line-height: 1.1; }
+.title span { color: #8a8aa6; font-weight: 600; font-size: 17px; }
+.sub {
+  margin-top: 6px;
+  font-size: 11px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #6f6f8c;
+  transition: opacity 0.8s ease;
+}
+.sub.is-faded { opacity: 0; }
+
+.hud--controls { bottom: 26px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; }
+.ghost {
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #d6d6e6; font: inherit; font-size: 13px; font-weight: 600;
+  padding: 9px 18px; border-radius: 999px; cursor: pointer;
+  transition: background 0.2s;
+}
+.ghost:hover { background: rgba(255, 255, 255, 0.13); }
+
+@media (max-width: 560px) {
+  .hud--top { top: 18px; left: 18px; }
+  .title { font-size: 21px; }
+}

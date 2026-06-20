@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="theme-color" content="#05060a" />
+    <title>鼓動 / ORB — interactive 3D</title>
+    <meta name="description" content="マウスに反応して脈動・発光する3Dオーブ。Three.js + GLSLシェーダー。" />
+    <meta property="og:title" content="鼓動 / ORB" />
+    <meta property="og:description" content="マウスに反応して脈動・発光する3Dオーブ。" />
+  </head>
+  <body>
+    <canvas id="c"></canvas>
+
+    <header class="hud hud--top">
+      <h1 class="title">鼓動 <span>/ ORB</span></h1>
+      <p class="sub">move · drag · click</p>
+    </header>
+
+    <nav class="hud hud--controls">
+      <button class="ghost" id="theme">◑ テーマ</button>
+    </nav>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
